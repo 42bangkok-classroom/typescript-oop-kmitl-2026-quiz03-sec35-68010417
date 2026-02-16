@@ -15,6 +15,6 @@ export class User {
     return this.password === password;
   }
   getLoginAttempts(): number {
-    return User.LOGIN_ATTEMPTS;
+    return this.LOGIN_ATTEMPTS;
   }
 }
