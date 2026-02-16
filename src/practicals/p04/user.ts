@@ -1,5 +1,3 @@
-import { parentPort } from "node:worker_threads";
-
 export class User {
     username : string;
     private password :string;
@@ -9,14 +7,14 @@ export class User {
         this.username = name;
         this.password = password;
     }
-    login(password:string){
+    login(password:string):boolean{
         User.LOGIN_ATTEMPTS += 1;
         return this.validatePassword(password);
     }
     private validatePassword(password: string): boolean {
     return this.password === password
   }
-    getLoginAttempts(){
+    getLoginAttempts():number{
         return User.LOGIN_ATTEMPTS;
     }
 }
