@@ -1,5 +1,3 @@
-import { parentPort } from "node:worker_threads";
-
 export class User {
   username: string;
   private password: string;
